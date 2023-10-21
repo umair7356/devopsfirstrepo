@@ -15,6 +15,6 @@ stages:
    - template: /loop/loop.yaml
      parameters:
        loop_values: 
-       - "value1"
+       - "umair"
        - "value2"
        - "value3"
