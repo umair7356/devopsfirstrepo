@@ -1,0 +1,26 @@
+info:
+personal_info:
+     name : Muhammad umair islam
+     father_name: Muhammad Zubair
+     phone_no: 03xxxxxxxx
+     address: xxxxxxxxxxx
+     gender: male
+education:
+     qulification: BS(computer science)
+     cgpa: 3.59
+skill:
+     android:
+        experience: 1year
+     flutter:
+        experience: 1year
+     msexcel:
+        experience: 6months
+interest:
+        playing_cricket:
+        playing_bedminton:
+        reading_books:
+        playing_games:
+language:
+        punjabi:
+        urdu:
+        english:       
