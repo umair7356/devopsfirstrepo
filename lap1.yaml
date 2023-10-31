@@ -4,14 +4,12 @@ trigger:
       - main
   paths:
     include: 
-      - /dependency/dependency-ex1.yml
+      - lap1.yaml
 pool:
   vmImage: ubuntu-latest
 
 stages:
 - stage: Dev
-  dispalyname: First job
-  continueOnError: true
   jobs:
   - job: DevJob
     steps:
