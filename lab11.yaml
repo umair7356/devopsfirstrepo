@@ -38,7 +38,7 @@ stages:
   condition: successed ( 'Dev')
   jobs:
   - job: QAJob1
-    displayName:QA
+    displayName: QA
     continueOnError: true
     workspace:
       clean: outputs
