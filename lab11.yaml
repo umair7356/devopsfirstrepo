@@ -48,7 +48,7 @@ stages:
       - script: echo QA stage1
         displayName: QA stage1
 
-  - job: QA Job2
+  - job: QA_Job2
     displayName: QA
     continueOnError: true
     workspace:
@@ -61,9 +61,9 @@ stages:
 
 - stage: UAT
   dependsOn: QA failed
-  condition: successed ( 'UAT')
+  condition: successe('UAT')
   jobs:
-  - job: UATJob 1
+  - job: UATJob1
     displayName: UAT
     continueOnError: true
     workspace:
@@ -73,7 +73,7 @@ stages:
         displayName: UAT stage1
       - script: echo UAT stage2
         displayName: UAT stage2
-  - job: UATJob 2
+  - job: UATJob_2
     displayName: UAT 2
     continueOnError: true
     workspace:
