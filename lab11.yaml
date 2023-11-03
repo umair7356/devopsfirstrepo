@@ -64,7 +64,7 @@ stages:
   condition: successed ( 'UAT')
   jobs:
   - job: UATJob 1
-    displayName:UAT
+    displayName: UAT
     continueOnError: true
     workspace:
       clean: outputs
