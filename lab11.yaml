@@ -48,7 +48,7 @@ stages:
       - script: echo QA stage1
         displayName: QA stage1
 
-    - job: QAJob2
+  - job: QA Job2
     displayName: QA
     continueOnError: true
     workspace:
