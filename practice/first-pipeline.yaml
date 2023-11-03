@@ -4,7 +4,7 @@ trigger:
       - main
   paths:
     include: 
-      - /first-pipeline.yml
+      - /practice/variables/first-pipeline.yml
 pool:
   vmImage: ubuntu-latest
 
