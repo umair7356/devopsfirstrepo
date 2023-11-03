@@ -35,9 +35,11 @@ stages:
       
 - stage: QA
   dependsOn: Dev
+  condition: successed ( 'Dev')
   jobs:
   - job: QAJob1
     displayName:QA
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -48,6 +50,7 @@ stages:
 
     - job: QAJob2
     displayName:QA
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -58,9 +61,11 @@ stages:
 
 - stage: UAT
   dependsOn: QA failed
+  condition: successed ( 'UAT')
   jobs:
   - job: UATJob 1
     displayName:UAT
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -70,6 +75,7 @@ stages:
         displayName: UAT stage2
   - job: UATJob 2
     displayName:UAT 2
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -79,9 +85,11 @@ stages:
         displayName: UAT stage2        
 
 - stage: Preprod
+  dependsOn:[]
   jobs:
   - job: PreprodJob1
     displayName:Preprod
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -92,6 +100,7 @@ stages:
 
   - job: PreprodJob2
     displayName:Preprod
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -106,6 +115,7 @@ stages:
   jobs:
   - job: ProductionJob1
     displayName:Preprod
+    continueOnError: true
     workspace:
       clean: outputs
     steps:
