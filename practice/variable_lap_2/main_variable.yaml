@@ -15,7 +15,7 @@ stages:
   jobs:
   - job: FirstJob
     variables:
-     - template: /practice/variable_lap_2/variable_template.yml
+     - template: /practice/variable_lap_2/variable_template.yaml
 
     steps:
     - script: echo $(my_var) ${{ variables.var1 }} ${{ variables.var2 }} ${{ variables.var3 }}
