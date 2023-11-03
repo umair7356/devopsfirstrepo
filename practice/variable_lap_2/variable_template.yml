@@ -1,0 +1,8 @@
+variables:
+- name: var1
+  value: Dev
+- name: var2
+  value: QA
+- name: var3
+  value: UAT
+- group: pipeline-variable-group
