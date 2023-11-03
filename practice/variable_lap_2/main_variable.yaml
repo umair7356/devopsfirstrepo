@@ -4,7 +4,7 @@ trigger:
       - main
   paths:
     include: 
-      - /practice/variable_lap_2/main-variable.yml
+      - /practice/variable_lap_2/main-variable.yaml
 
 pool:
   vmImage: ubuntu-latest
