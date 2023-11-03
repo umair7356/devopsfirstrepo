@@ -38,7 +38,6 @@ stages:
   jobs:
   - job: QAJob1
     displayName:QA
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -49,7 +48,6 @@ stages:
 
     - job: QAJob2
     displayName:QA
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -63,7 +61,6 @@ stages:
   jobs:
   - job: UATJob 1
     displayName:UAT
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -73,7 +70,6 @@ stages:
         displayName: UAT stage2
   - job: UATJob 2
     displayName:UAT 2
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -86,7 +82,6 @@ stages:
   jobs:
   - job: PreprodJob1
     displayName:Preprod
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -97,7 +92,6 @@ stages:
 
   - job: PreprodJob2
     displayName:Preprod
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
@@ -112,7 +106,6 @@ stages:
   jobs:
   - job: ProductionJob1
     displayName:Preprod
-    continueOnError: true
     workspace:
       clean: outputs
     steps:
