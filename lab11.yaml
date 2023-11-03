@@ -110,7 +110,7 @@ stages:
 
 - stage: Production
   dependsOn: UAT
-  condition: failed()
+  condition: failed('UAT')
   jobs:
   - job: ProductionJob1
     displayName: Preprod
