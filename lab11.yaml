@@ -85,7 +85,7 @@ stages:
         displayName: UAT stage2        
 
 - stage: Preprod
-  dependsOn:[]
+  dependsOn: none
   jobs:
   - job: PreprodJob1
     displayName: Preprod
