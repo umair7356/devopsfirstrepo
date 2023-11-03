@@ -17,9 +17,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "Dev stage1"
+      - script: echo Dev stage1
         displayName:step1
-      - script: echo "Dev stage2"
+      - script: echo Dev stage2
         displayName:step2
 
   - job: DevJob2
@@ -28,9 +28,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "Dev stage1"
+      - script: echo Dev stage1
         displayName:step1
-      - script: echo "Dev stage2"
+      - script: echo Dev stage2
         displayName:step2
       
 - stage: QA
@@ -42,9 +42,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "QA stage1"
+      - script: echo QA stage1
         displayName:QA stage1
-      - script: echo "QA stage1"
+      - script: echo QA stage1
         displayName:QA stage1
 
     - job: QAJob2
@@ -53,9 +53,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "QA stage1"
+      - script: echo QA stage1
         displayName:QA stage1
-      - script: echo "QA stage2"
+      - script: echo QA stage2
         displayName:QA stage2
 
 - stage: UAT
@@ -67,9 +67,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "UAT stage1"
+      - script: echo UAT stage1
         displayName: UAT stage1
-      - script: echo "UAT stage2"
+      - script: echo UAT stage2
         displayName: UAT stage2
   - job: UATJob
     displayName:UAT 2
@@ -77,9 +77,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "UAT stage1"
+      - script: echo UAT stage1
         displayName: UAT stage1
-      - script: echo "UAT stage2"
+      - script: echo UAT stage2
         displayName: UAT stage2        
 
 - stage: Preprod
@@ -90,9 +90,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "Preprod stage1"
+      - script: echo preprod stage1
         displayName: Preprod stage1
-      - script: echo "Preprod stage1"
+      - script: echo Preprod stage1
         displayName: Preprod stage1  
 
   - job: PreprodJob2
@@ -101,9 +101,9 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "Preprod stage1"
+      - script: echo Preprod stage1
         displayName: Preprod stage1
-      - script: echo "Preprod stage1"
+      - script: echo Preprod stage1
         displayName: Preprod stage1        
 
 
@@ -117,7 +117,7 @@ stages:
     workspace:
       clean: outputs
     steps:
-      - script: echo "Production stage1"
+      - script: echo Production stage1
         displayName: production stage1
-      - script: echo "Production stage2"
+      - script: echo Production stage2
         displayName: production stage2  
