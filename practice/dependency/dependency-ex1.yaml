@@ -4,7 +4,7 @@ trigger:
       - main
   paths:
     include: 
-      - /dependency/dependency-ex1.yml
+      - /practice/dependency/dependency-ex1.yml
 pool:
   vmImage: ubuntu-latest
 
