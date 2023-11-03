@@ -49,7 +49,7 @@ stages:
         displayName: QA stage1
 
     - job: QAJob2
-    displayName:QA
+    displayName: QA
     continueOnError: true
     workspace:
       clean: outputs
