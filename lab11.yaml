@@ -18,9 +18,9 @@ stages:
       clean: outputs
     steps:
       - script: echo Dev stage1
-        displayName:step1
+        displayName: step1
       - script: echo Dev stage2
-        displayName:step2
+        displayName: step2
 
   - job: DevJob2
     displayName: Second Job
@@ -29,9 +29,9 @@ stages:
       clean: outputs
     steps:
       - script: echo Dev stage1
-        displayName:step1
+        displayName: step1
       - script: echo Dev stage2
-        displayName:step2
+        displayName: step2
       
 - stage: QA
   dependsOn: Dev
@@ -43,9 +43,9 @@ stages:
       clean: outputs
     steps:
       - script: echo QA stage1
-        displayName:QA stage1
+        displayName: QA stage1
       - script: echo QA stage1
-        displayName:QA stage1
+        displayName: QA stage1
 
     - job: QAJob2
     displayName:QA
@@ -54,9 +54,9 @@ stages:
       clean: outputs
     steps:
       - script: echo QA stage1
-        displayName:QA stage1
+        displayName: QA stage1
       - script: echo QA stage2
-        displayName:QA stage2
+        displayName: QA stage2
 
 - stage: UAT
   dependsOn: QA failed
