@@ -61,7 +61,7 @@ stages:
 
 - stage: UAT
   dependsOn: QA failed
-  condition: successe('UAT')
+  condition: unsucceeded('QA')
   jobs:
   - job: UATJob1
     displayName: UAT
