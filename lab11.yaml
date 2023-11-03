@@ -74,7 +74,7 @@ stages:
       - script: echo UAT stage2
         displayName: UAT stage2
   - job: UATJob 2
-    displayName:UAT 2
+    displayName: UAT 2
     continueOnError: true
     workspace:
       clean: outputs
@@ -88,7 +88,7 @@ stages:
   dependsOn:[]
   jobs:
   - job: PreprodJob1
-    displayName:Preprod
+    displayName: Preprod
     continueOnError: true
     workspace:
       clean: outputs
@@ -99,7 +99,7 @@ stages:
         displayName: Preprod stage1  
 
   - job: PreprodJob2
-    displayName:Preprod
+    displayName: Preprod
     continueOnError: true
     workspace:
       clean: outputs
