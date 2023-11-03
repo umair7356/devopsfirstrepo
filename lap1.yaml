@@ -11,34 +11,113 @@ pool:
 stages:
 - stage: Dev
   jobs:
-  - job: DevJob
+  - job: DevJob1
+    displayName: First Job
+    continueOnError: true
+    workspace:
+      clean: outputs
     steps:
-      - script: echo "Dev stage"
+      - script: echo "Dev stage1"
+        displayName:step1
+        script: echo "Dev stage2"
+        displayName:step2
 
+  - job: DevJob2
+    displayName: Second Job
+    continueOnError: true
+    workspace:
+      clean: outputs
+    steps:
+      - script: echo "Dev stage1"
+        displayName:step1
+      - script: echo "Dev stage2"
+        displayName:step2
+      
 - stage: QA
   dependsOn: Dev
   jobs:
-  - job: QAJob
+  - job: QAJob1
+    displayName:QA
+    continueOnError: true
+    workspace:
+      clean: outputs
     steps:
-      - script: echo "QA stage"
+      - script: echo "QA stage1"
+        displayName:QA stage1
+      - script: echo "QA stage1"
+        displayName:QA stage1
+
+    - job: QAJob2
+    displayName:QA
+    continueOnError: true
+    workspace:
+      clean: outputs
+    steps:
+      - script: echo "QA stage1"
+        displayName:QA stage1
+      - script: echo "QA stage2"
+        displayName:QA stage2
 
 - stage: UAT
   dependsOn: QA
   jobs:
-  - job: UATJob
+  - job: UATJob 1
+    displayName:UAT
+    continueOnError: true
+    workspace:
+      clean: outputs
     steps:
-      - script: echo "UAT stage"
+      - script: echo "UAT stage1"
+        displayName: UAT stage1
+      - script: echo "UAT stage2"
+        displayName: UAT stage2
+  - job: UATJob
+    displayName:UAT 2
+    continueOnError: true
+    workspace:
+      clean: outputs
+    steps:
+      - script: echo "UAT stage1"
+        displayName: UAT stage1
+      - script: echo "UAT stage2"
+        displayName: UAT stage2        
 
 - stage: Preprod
   jobs:
-  - job: PreprodJob
+  - job: PreprodJob1
+    displayName:Preprod
+    continueOnError: true
+    workspace:
+      clean: outputs
     steps:
-      - script: echo "Preprod stage"
+      - script: echo "Preprod stage1"
+        displayName: Preprod stage1
+      - script: echo "Preprod stage1"
+        displayName: Preprod stage1  
+
+  - job: PreprodJob2
+    displayName:Preprod
+    continueOnError: true
+    workspace:
+      clean: outputs
+    steps:
+      - script: echo "Preprod stage1"
+        displayName: Preprod stage1
+      - script: echo "Preprod stage1"
+        displayName: Preprod stage1        
+
 
 - stage: Production
   dependsOn: UAT
   condition: failed()
   jobs:
-  - job: ProductionJob
+  - job: ProductionJob1
+    displayName:Preprod
+    continueOnError: true
+    workspace:
+      clean: outputs
     steps:
-      - script: echo "Production stage"
+      - script: echo "Production stage1"
+        displayName: production stage1
+      - script: echo "Production stage2"
+        displayName: production stage2  
