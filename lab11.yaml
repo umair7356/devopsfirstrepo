@@ -4,7 +4,7 @@ trigger:
       - main
   paths:
     include: 
-      - /practice/lab1.yaml
+      - /practice/lab11.yaml
 pool:
   vmImage: ubuntu-latest
 
@@ -59,7 +59,7 @@ stages:
         displayName:QA stage2
 
 - stage: UAT
-  dependsOn: QA
+  dependsOn: QA failed
   jobs:
   - job: UATJob 1
     displayName:UAT
