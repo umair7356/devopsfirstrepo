@@ -35,7 +35,7 @@ stages:
       
 - stage: QA
   dependsOn: Dev
-  condition: successed ('Dev')
+  condition: succeeded('Dev')
   jobs:
   - job: QAJob1
     displayName: QA
