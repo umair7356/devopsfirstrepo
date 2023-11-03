@@ -4,7 +4,7 @@ trigger:
       - main
   paths:
     include: 
-      - /practice/lap1.yaml
+      - /practice/lab1.yaml
 pool:
   vmImage: ubuntu-latest
 
